@@ -49,4 +49,8 @@ task writeVersionPropertiesFile(type: WriteProperties) {
     property 'version', project.version
 }
 
+task stage {
+    dependsOn build
+}
+
 assemble.dependsOn writeVersionPropertiesFile
